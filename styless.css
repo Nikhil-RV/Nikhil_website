@@ -199,7 +199,7 @@ body {
 .skills-list {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
     gap: 30px;
     max-width: 1000px;
     margin: 0 auto;
@@ -213,11 +213,12 @@ body {
 
 .skills-list li {
     background-color: #000000;
-    border: 1px solid #ddd;
+    border: 1px solid#ddd;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -226,6 +227,13 @@ body {
 
 .skills-list i {
     margin-right: 10px;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .skills-list {
+        grid-template-columns: repeat(1, minmax(0, 1fr)); /* Switch to a single column layout */
+    }
 }
 
 
@@ -279,15 +287,19 @@ canvas {
     top: 0;
     left: 0;
     z-index: -1; 
+    width: 100%; /* Adjust width to match viewport */
+    height: 100%; /* Adjust height to match viewport */
 }
 /* Additional styles for the canvas */
 #particles-js {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1; /* Place the canvas behind other elements */
-    
+    width: 100%; /* Adjust width to match viewport */
+    height: 100%; /* Adjust height to match viewport */
+    z-index: -1;
 }
+
 
 /*==================================== Portfolio Modal CSS==================================== */
 /* ... Existing modal styles ... */
@@ -302,6 +314,7 @@ canvas {
     padding: 20px; /* Adjust padding around the grid */
     max-width: auto; /* Adjust max width as needed */
     margin: 0 auto;
+    width: 100%;
 }
 
   
@@ -384,7 +397,8 @@ canvas {
 
 .modal {
     display: none;
-    overflow-y: auto;
+    /* overflow-y: auto; */
+    /* overflow-x: hidden; */
     position: fixed;
     z-index: 100;
     top: 0;
@@ -403,8 +417,8 @@ canvas {
     padding: 20px;
     margin: auto;
     max-width: 70vw; /* Adjust the maximum width as needed */
-    /* overflow-y: scroll; */
-    /* overflow-x: none; */
+    overflow-y: scroll;
+    overflow-x: hidden;
     position: relative;
     margin-top: 40px ;
     box-sizing: border-box; 
@@ -413,25 +427,49 @@ canvas {
     justify-content: left;
     align-items: center;
     border-radius: 10px;
-    height: 830px
+    height: 100%
 }
 
+/* Style the scrollbar */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+}
 
 .modal-content img {
     max-width: 50vw; /* Ensure images fit within their container */
     height: auto; /* Maintain aspect ratio */
     padding: 5 5 5 5;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
 
 .close-button {
-    position: fixed;
+    position: absolute;
     top: 10px;
     right: 15px;
-    font-size: 50px;
+    font-size: 20px;
     cursor: pointer;
     color: white;
+}
+
+.close-button:hover {
+    color: var(--secondary-color);
+    background-color: rgba(20, 0, 243, 0.1); /* Adjust the desired background color */
+
 }
 
 /* Add this CSS to your existing stylesheet */
@@ -488,12 +526,13 @@ canvas {
 }
 
 .navigation button {
-    background-color: rgba(255, 255, 255, .25);
-	color: #1C1D21;
+    background-color: rgba(255, 255, 255, 0.795);
+	color: white;
 	cursor: pointer;
 	height: 30px;
 	padding: 15px;
-
+    border-radius: 50%;
+    border: none;
 	transition: background-color .5s, color .5s;
 }
 
@@ -508,6 +547,20 @@ canvas {
 }
 
 .navigation button:hover{
-	background-color: rgba(28,29,33, .75);
-	color: #EEEFF7;
+	background-color: yellow;
+	color: black;
+}
+
+@media (max-width: 1200px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+        gap: 15px; /* Reduce gap for better spacing */
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(1, 1fr); /* Single column on small screens */
+        gap: 10px; /* Further reduce gap for smaller screens */
+    }
 }

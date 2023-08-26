@@ -47,7 +47,7 @@
             TVS Motor Comapny a leading Motorcycle manufactuer in India. <br> His expertise lies in navigating complex
             data landscapes, distilling actionable insights, and leveraging analytics for strategic
             decision-making.<br>Proficient in crafting impactful visualizations, developing machine learning models, and
-            delivering valuable recommendations,<br> Nikhil aspires to contribute as a Data Scientist, optimizing
+            delivering valuable recommendations,<br> Nikhil aspires to contribute as an Analytics professional, optimizing
             processes and driving data-driven solutions for business success.</p>
         <p>He has finshed his Masters in Business Analytics from Trinity College Dublin and he holds a Bachelor degree
             in Technology from GITAM deemed University, India.</p>
@@ -97,7 +97,7 @@
                 </div>
                 <div class="modal">
                     <div class="modal-content">
-                        <span class="close-button">&times;</span>
+                        <span class="close-button">Close</span>
                         <h2>Ocean Technology dashboard</h2>
                         <div id="work0" class="slideshow">
                             <img src="P1_1.png" alt="Image 1" class="slide">
@@ -126,13 +126,13 @@
             <div class="work-item">
                 <div class="project-card">
                     <img src="P2.png" alt="Work 2">
-                    <h3>Ocean Technology dashboard</h3>
+                    <h3>Service Income dashboard</h3>
                     <button class="view-button">View Details</button>
                 </div>
                 <div class="modal">
                     <div class="modal-content">
-                        <span class="close-button">&times;</span>
-                        <h2>Ocean Technology dashboard</h2>
+                        <span class="close-button">Close</span>
+                        <h2>Service Income dashboard</h2>
                         <div id="work1" class="slideshow">
                             <img src="P2.png" alt="Image 1" class="slide1">
                         </div>
@@ -147,13 +147,13 @@
             <div class="work-item">
                 <div class="project-card">
                     <img src="P3.png" alt="Work 3">
-                    <h3>Ocean Technology dashboard</h3>
+                    <h3>Customer feedback dashboard</h3>
                     <button class="view-button">View Details</button>
                 </div>
                 <div class="modal">
                     <div class="modal-content">
-                        <span class="close-button">&times;</span>
-                        <h2>Ocean Technology dashboard</h2>
+                        <span class="close-button">Close</span>
+                        <h2>Customer feedback dashboard</h2>
                         <div id="work2" class="slideshow">
                             <img src="P3.png" alt="Image 1" class="slide2">
                         </div>
@@ -168,12 +168,12 @@
             <div class="work-item">
                 <div class="project-card">
                     <img src="P4_1.png" alt="Work 4">
-                    <h3>Ocean Technology dashboard</h3>
+                    <h3>Sales dashboard</h3>
                     <button class="view-button">View Details</button>
                 </div>
                 <div class="modal">
                     <div class="modal-content">
-                        <span class="close-button">&times;</span>
+                        <span class="close-button">Close</span>
                         <h2>Sales dashboard</h2>
                         <div id="work3" class="slideshow">
                             <img src="P4_1.png" alt="Image 1" class="slide1">
@@ -314,6 +314,33 @@
 
 
         </script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        navLinks.forEach(function (link) {
+            link.addEventListener("click", function (event) {
+                event.preventDefault();
+                const targetId = link.getAttribute("href");
+                const targetSection = document.querySelector(targetId);
+
+                if (targetSection) {
+                    // Calculate the offset of the section from the top of the page
+                    const offset = targetSection.offsetTop;
+
+                    // Scroll to the section with smooth behavior
+                    window.scrollTo({
+                        top: offset,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+    });
+</script>
+
 
 </body>
 
