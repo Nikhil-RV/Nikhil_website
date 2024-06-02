@@ -564,3 +564,61 @@ canvas {
         gap: 10px; /* Further reduce gap for smaller screens */
     }
 }
+
+.eda-section {
+    text-align: center;
+    padding: 40px;
+    background-color: #black;
+}
+
+.eda-thumbnails {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.eda-thumbnail {
+    flex: 1 1 calc(25% - 10px);
+    max-width: calc(25% - 10px);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ececec 100%);
+    margin: 0;
+    position: relative;
+}
+
+.eda-thumbnail img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-description {
+    font-size: 16px;
+    color: #white;
+    max-width: 800px auto;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.view-eda-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.view-eda-button:hover {
+    background-color: #0056b3;
+}
+
