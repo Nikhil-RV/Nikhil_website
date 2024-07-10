@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styless.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TV02M979TV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TV02M979TV');
+    </script>
+     <style>
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .back-arrow {
+            margin-right: 5px;
+            color: #ddd;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 7rem;
+        }
+
+        .experience-section {
+            padding: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .experience-section h2 {
+            margin-bottom: 1rem;
+        }
+
+        .experience-item {
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .experience-item h3 {
+            margin: 0;
+        }
+
+        .experience-item p {
+            margin: 0.5rem 0;
+        }
+
+        .experience-item ul {
+            padding-left: 2rem;
+            list-style: disc;
+            margin-top: 1rem;
+        }
+
+        .experience-item ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-item img {
+            width: 150px;
+            height: 70px;
+            margin-right: 10px;
+            vertical-align: middle;
+            margin-bottom: 2rem;
+            flex-shrink: 0;
+        }
+
+        footer {
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 1rem;
+        }
+
+        body.leave {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+    <title>Work Experience</title>
+    <!-- Include your additional CSS and JavaScript files here if needed -->
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="navigateToHome()"><i class="fas fa-arrow-left back-arrow"></i> Home</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Work Experience</h1>
+    </header>
+
+    <section class="experience-section">
+        <div class="experience-item">
+            <h2>Data Scientist at Musgrave (Contract)</h2>
+            <img src="Musgravelogo.jpg"Musgrave Logo">
+            <h3>Dublin, Ireland</h3>
+            <p><strong>Duration:</strong> January 2024 — Present</p>
+            <h4>Responsibilities:</h4>
+            <ul>
+                <li>Automated HR review processes with Power Apps, enabling completion of over 1400 PDRs.</li>
+                <li>Migrated data management to integrated cloud solutions (SharePoint, Microsoft Lists), improving reliability.</li>
+                <li>Developed and maintained 5 Power BI dashboards, providing insights into operational effectiveness and employee performance.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h2>Data Scientist at TVS Motor Company</h2>
+            <img src="tvsmotorlogo.png" alt="TVS Motor Company Logo">
+            <h3>Bengaluru, India</h3>
+            <p><strong>Duration:</strong> May 2019 — August 2022</p>
+            <h4>Responsibilities:</h4>
+            <ul>
+                <li>Data Extraction and Integration: Led the integration of over 10 diverse data sources into a data lake, reducing data processing time by 80%.</li>
+                <li>Data Modelling and ETL Management: Applied advanced SQL for data cleansing and selection; maintained SLAs for Azure Data Factory pipelines ensuring data accuracy and availability.</li>
+                <li>Exploratory Data Analysis (EDA): Analyzed over 10 million customer records using Azure Databricks, Power BI, and Excel, delivering insights for strategic decisions.</li>
+                <li>Data Visualization and BI Reporting: Developed 13 complex Power BI dashboards, increasing dealer profitability by 30% and customer satisfaction by 7%.</li>
+                <li>Machine Learning and A/B Testing: Implemented classification machine learning models and conducted A/B testing, improving service visits by 20%. Worked on stock forecasting projects.</li>
+                <li>Project Management: Worked in cross-functional teams and supported, analysed data and gave insights, delivered projects for 10 stakeholders using agile project management.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Nikhil Rajana</p>
+    </footer>
+
+    <script>
+        function navigateToHome() {
+            document.body.classList.add("leave");
+            setTimeout(function() {
+                window.location.href = "index.html";
+            }, 500); // Adjust the delay to match the transition duration
+        }
+    </script>
+</body>
+</html>

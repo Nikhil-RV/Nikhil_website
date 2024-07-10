@@ -161,8 +161,8 @@ body {
 #about img {
     display: block;
     margin: 0 auto 40px; /* Center the image and add margin */
-    width: 170px; /* Adjust the size as needed */
-    height: 170px; /* Adjust the size as needed */
+    width: 200px; /* Adjust the size as needed */
+    height: 200px; /* Adjust the size as needed */
     border-radius: 70%;
     object-fit: cover;
 }
@@ -622,3 +622,59 @@ canvas {
     background-color: #0056b3;
 }
 
+/* Chatbot Styles */
+#chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    background: white;
+}
+
+#chatbot-header {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#chatbot-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+#chatbot-input {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+
+#chatbot-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+}
+
+#chatbot-input button {
+    padding: 10px;
+    border: none;
+    background: #007bff;
+    color: white;
+}
+
+#chatbot-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 70%;
+}
